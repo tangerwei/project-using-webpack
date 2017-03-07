@@ -1,0 +1,41 @@
+{
+  "name": "a",
+  "version": "0.0.1",
+  "description": "this is a project try to make a whole project",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node build/build.js",
+    "build": "webpack lib/app.js lib/bundle.js",
+    "build_test": "webpack lib/common.config.js lib/common_config_bundle.js",
+    "babel1": "babel src/app.js --out-file lib/app.js",
+    "babel2": "babel src/main.js --out-file lib/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tangerwei/project-using-webpack.git"
+  },
+  "keywords": [
+    "react-bootstrap"
+  ],
+  "author": "Tangerwei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tangerwei/project-using-webpack/issues"
+  },
+  "homepage": "https://github.com/tangerwei/project-using-webpack#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.23.0",
+    "babel-loader": "^6.3.2",
+    "babel-plugin-transform-react-jsx": "^6.23.0",
+    "babel-preset-env": "^1.2.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
