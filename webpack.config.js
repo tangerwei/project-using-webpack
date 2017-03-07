@@ -12,9 +12,8 @@ var uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
 var config = {
   plugins: [commonPlugin,uglifyPlugin],
   entry: {
-    app: path.resolve(__dirname, 'lib/app.js'),
-    main: path.resolve(__dirname, 'lib/main.js'),
     index: path.resolve(__dirname, 'lib/index.js'),
+    iframe: path.resolve(__dirname, 'lib/iframe.js')
   },
   //其他配置//[name].[hash].js
   output: {
@@ -24,8 +23,9 @@ var config = {
   resolve: {
     extensions: [".js", ".jsx"],
     alias:{
-      'react':path.join(__dirname,'node_modules/react/react.js'),
-      'react-dom':path.join(__dirname,'node_modules/react-dom/dist/react-dom.js')
+      'react':path.join(__dirname,'./node_modules/react/dist/react.js'),
+      'react-dom':path.join(__dirname,'./node_modules/react-dom/dist/react-dom.js'),
+      'react-bootstrap':path.join(__dirname,'./node_modules/react-bootstrap/dist/react-bootstrap.js')
     }
   },
   module: {
