@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+    <style>
+        .pass{
+            background-color: green;
+        }
+        .fail{
+            background-color: red;
+        }
+    </style>
+    <script>
+        (function(){
+            var results;
+            this.assert = function assert(value,desc){
+                var li = document.createElement("li");
+                li.className = value ? "pass" : "fail";
+                li.appendChild(document.createTextNode(desc));
+                results.appendChild(li);
+                if(!value){
+                    li.parentNode.parentNode.className = "fail";
+                }
+                return li;
+            };
+            this.test = function test(name,fn){
+                results = document.getElementById("results");
+                results = assert(true,name).appendChild(document.createElement("ul"));
+                fn();
+            };
+        })();
+        window.onload = function(){
+            test("list 1",function(){
+                assert(true,"first test in list 1");
+                assert(false,"second test in list 1");
+                assert(true,"third test in list 1");
+            });
+            test("list 2",function(){
+                assert(true,"first test in list 2");
+                assert(false,"second test in list 2");
+                assert(true,"third test in list 2");
+            });
+            test("list 3",function(){
+                assert(true,"first test in list 3");
+                assert(true,"second test in list 3");
+                assert(true,"third test in list 3");
+            });
+        }
+    </script>
+</head>
+<body>
+    <ul id="results"></ul>
+</body>
+</html>

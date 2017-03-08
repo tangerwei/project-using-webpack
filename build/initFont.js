@@ -1,0 +1,1 @@
+webpackJsonp([2,3],{2:function(n,t,e){"use strict";n.exports={setFont:function(n,t){if(n&&t){var e=n.innerWidth;t.documentElement;n.innerWidth>640||640==n.innerWidth?t.style.fontSize="100px":t.style.fontSize=e/640*100+"px"}}}}},[2]);

@@ -17,3 +17,8 @@ this is a project to using webpack
         <li><a href="https://webpack.js.org/">webpack首页</a></li>
     </ul>
 </p>
+
+<p>
+    2017年3月8日 14:42:44
+    初识测试，添加两个测试页面的例子
+</p>

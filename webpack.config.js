@@ -13,7 +13,8 @@ var config = {
   plugins: [commonPlugin,uglifyPlugin],
   entry: {
     index: path.resolve(__dirname, 'lib/index.js'),
-    iframe: path.resolve(__dirname, 'lib/iframe.js')
+    iframe: path.resolve(__dirname, 'lib/iframe.js'),
+    initFont: path.resolve(__dirname, 'lib/initFont.js')
   },
   //其他配置//[name].[hash].js
   output: {
