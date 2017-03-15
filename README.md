@@ -22,3 +22,7 @@ this is a project to using webpack
     2017年3月8日 14:42:44
     初识测试，添加两个测试页面的例子
 </p>
+
+<p>
+    参考地址http://www.omeme.me/demos/lol/#/index/player
+</p>
